@@ -12,7 +12,7 @@ function App() {
           React 19 + Tailwind v4 🚀
         </h1>
         <p className="text-white/80">
-          Your bootcamp environment is ready!
+          We did it be zenezena
         </p>
       </div>
     </div>
