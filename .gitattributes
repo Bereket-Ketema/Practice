@@ -1,0 +1,26 @@
+# Force TypeScript as primary language
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+
+# Mark build files as generated (not counted)
+dist/* linguist-generated=true
+build/* linguist-generated=true
+*.min.js linguist-generated=true
+*.min.css linguist-generated=true
+
+# Exclude CSS from language stats
+*.css linguist-vendored=true
+*.scss linguist-vendored=true
+*.module.css linguist-vendored=true
+
+# Exclude config files
+*.config.js linguist-vendored=true
+*.config.ts linguist-vendored=true
+vite.config.ts linguist-vendored=true
+
+# Exclude lock files
+package-lock.json linguist-generated=true
+yarn.lock linguist-generated=true
+pnpm-lock.yaml linguist-generated=true
