@@ -3,21 +3,35 @@
 // import viteLogo from './assets/vite.svg'
 // import heroImg from './assets/hero.png'
 import './App.css'
+// App.tsx
+import React, { useState } from 'react';
+import TodoList from './component/Practice';
 
 function App() {
+  // Sample todo data
+  const [todos, setTodos] = useState([
+    { id: 1, text: 'Learn React', completed: false },
+    { id: 2, text: 'Learn TypeScript', completed: false },
+    { id: 3, text: 'Build a project', completed: true },
+  ]);
+
+  // Toggle function
+  const handleToggle = (id: number) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id
+          ? { ...todo, completed: !todo.completed }
+          : todo
+      )
+    );
+  };
+
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-      <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-2xl">
-        <h1 className="text-4xl font-bold text-white mb-4">
-          React 19 + Tailwind v4 🚀
-        </h1>
-        <p className="text-white/80">
-          We did it be zenezena
-        </p>
-      </div>
+    <div>
+      <h1>Todo App</h1>
+      <TodoList todos={todos} onToggle={handleToggle} />
     </div>
-  )
+  );
 }
 
-
-export default App
+export default App;
