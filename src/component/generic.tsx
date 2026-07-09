@@ -31,9 +31,9 @@ const users: User[] = [
 function App() {
   return (
     <List
-      items={users}
-      keyExtractor={(user) => user.id}
-      renderItem={(user) => (
+      items={users}  // Step 1: You pass your data
+      keyExtractor={(user) => user.id}  // Step 2: Tell how to get IDs
+      renderItem={(user) => (  // Step 3: Tell how to display
         <div>
           <strong>{user.name}</strong>
           <span>{user.email}</span>
@@ -42,3 +42,14 @@ function App() {
     />
   )
 }
+
+//This creates a reusable list component that can
+// work with any type of data. Instead of creating 
+// separate lists for users, products, comments, etc.,
+//  you create one flexible list that works with everything!
+
+// This is like saying: "I'll work with any type, call it 'T'"
+function List<T>({ items, renderItem, keyExtractor }: ListProps<T>) {
+  // ...
+}
+
