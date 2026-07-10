@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "password123",
+      "avatar": "https://i.pravatar.cc/150?img=1"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "password": "password123",
+      "avatar": "https://i.pravatar.cc/150?img=2"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Complete project proposal",
+      "description": "Write and submit the project proposal for the client",
+      "status": "todo",
+      "priority": "high",
+      "userId": 1,
+      "createdAt": "2024-01-15T10:00:00Z",
+      "dueDate": "2024-01-20T17:00:00Z",
+      "tags": ["work", "urgent"]
+    }
+  ],
+  "comments": []
+}
